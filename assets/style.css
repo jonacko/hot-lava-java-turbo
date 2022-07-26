@@ -1,0 +1,42 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
+}
+
+:root {background-color:lightblue;}
+
+body {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    color: red;
+}
+
+.container {
+width: 800px;
+max-width: 80%;
+background-color: whitesmoke;
+border-radius: 20px;
+padding: 20px;
+}
+
+.btn-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin: 20px;
+}
+
+.btn {
+    background-color: darkorange;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.controls {
+    justify-content: center
+    align-items: center;
+}
