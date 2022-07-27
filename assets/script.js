@@ -25,11 +25,10 @@ function startGame() {
     startButton.classList.add('hide')
 
     // 
-    shuffledQuestions = questions.sort(() => Math.random() - .5)
-    currentQuestionIndex = 0
+    // shuffledQuestions = questions.sort(() => Math.random() - .5)
+    //currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
-    nextQuestion()
-
+showQuestion()
 }
 
 // This bit doesn't appear to work as the questions don't show and the 'next' button is hidden
@@ -38,8 +37,15 @@ function nextQuestion() {
     showQuestion(shuffledQuestions[currentQuestionIndex])
 }
 
-function showQuestion(question) {
-    questionElement.innterText = question.question
+function showQuestion() {
+console.log(questions[0].choices)
+//console.log(questions[0].choices)
+let questionEl=document.getElementById('question')
+//console.log(questionEl)
+questionEl.textContent=questions[0].question
+
+let choiceOneEl = document.getElementById('btn-1')
+choiceOneEl.textContent=questions[0].choices[0]
 
 }
 
@@ -54,10 +60,14 @@ function selectAnswer() {
 const questions = [
     {
         question: 'What does CSS stand for?',
-        answers: [
-            { text: 'Cascading Style Sheets', correct: true },
-            { text: 'Computer Syntax Selectors', correct: false }
-]
+        choices: ['Cascading Style Sheets', 'Computer Syntax Selectors', 'Q1 choice C', 'Q1 choice D'],
+        correctAnswer: 'Cascading Style Sheets'
+
+    }, 
+    {
+        question: 'This is question 2',
+        choices: ['Q2 choice A', 'Q2 choice B', 'Q2 choice C', 'Q2 choice D'],
+        correctAnswer: 'Q2 choice A'
     }
 ]
 
