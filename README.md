@@ -1,10 +1,11 @@
 # hot-lava-java-turbo
-Challenge 4 assignment for BCU Bootcamp due 28-07-22
-Deployed URL: 
+- Challenge 4 assignment for BCU Bootcamp due 28-07-22
+- Deployed URL: 
 
 Image of deployed web page:
 
-[image 1 here]
+![image](https://user-images.githubusercontent.com/106882755/181591278-e591c8ce-5cf1-4c43-864f-350d99709744.png)
+
 
 Contents:
 
@@ -17,7 +18,7 @@ Contents:
 
 This project was undertaken as a submission for a Birmingham City Bootcamp assignment, with a brief to create a timed coding quiz that records, stores and displays high scores.  The user story and acceptance criteria are below:
 
-[image 2 here]
+![image](https://user-images.githubusercontent.com/106882755/181591366-28cc6f44-7d36-4a2d-ada1-8f66847d53d5.png)
 
 ## 2. Key features:
 
