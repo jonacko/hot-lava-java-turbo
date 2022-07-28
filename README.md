@@ -1,6 +1,6 @@
 # hot-lava-java-turbo
 - Challenge 4 assignment for BCU Bootcamp due 28-07-22
-- Deployed URL: 
+- Deployed URL: https://jonacko.github.io/hot-lava-java-turbo/
 
 Image of deployed web page:
 
@@ -32,7 +32,7 @@ This project was undertaken as a submission for a Birmingham City Bootcamp assig
 
 Please see commented out code for detail of issues/further amendments needed, but summary is below:
 
-- TO DO: restyle front 'start' page to lose container box and centralise start button
+- TO DO: restyle front 'start' page to lose container box and centralise start button; move next button to more intuitive place on page
 - TO DO: fix timer issue - add 10s when user answers correctly (currently deducts 10)
 - TO DO: stop game when timer = 0 OR all questions have been answered
 - TO DO: record and display highest timer scores using local storage
