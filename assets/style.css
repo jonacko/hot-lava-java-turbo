@@ -15,11 +15,15 @@ body {
 
 }
 
+/* Timer styling */
+
 p {
     color: blue;
   margin: 100px;
 
 }
+
+/* Buttons Styling*/
 
 .container {
 width: 800px;

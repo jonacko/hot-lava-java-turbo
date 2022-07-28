@@ -1,7 +1,4 @@
-// Const = constant, the value cannot be redeclared/reassigned 
-// As a general rule declare a variable with Const unless you know the value will change
 // Below declares the const objects which are the buttons to make the game playable
-// Q: why does 'startButton' not need 'Element' after it?
 
 const startButton = document.getElementById('start-btn')
 const questionContainerElement = document.getElementById
@@ -13,8 +10,7 @@ let index=0;
 var score = 0
 
 
-
-//Timer
+// Timer functionality
 
 const startingMinutes = 1;
 let time = startingMinutes * 60;
@@ -30,13 +26,13 @@ function updateCountdown()  {
     time--;
 }
 
-//Hides the timer before start button is pressed
+// Hides the timer before start button is pressed
 
 countdownEl.classList.add('hide')
 
 
 
-// The below starts the game when the button is clicked (Event listener)
+// Starts the game when the button is clicked 
 
 startButton.addEventListener('click', startGame)
 
@@ -78,20 +74,23 @@ choiceFourEl.textContent=questions[index].choices[3]
 
 }
 
-function selectAnswer() {
-let answerEl=document.getElementById('answer-buttons') 
-    
-}
 
 // When an answer is clicked the 'next' button shows
+// When the correct answer is clicked 10s are added to the timer (but this doesn't work for some reason)
+// When the wrong answer is clicked 10s are subtracted from the timer
 
 answerButtonsElement.addEventListener('click', questionAnswered)
+
 
 function questionAnswered() {
     console.log('Question 1 Answered')
     nextButton.classList.remove('hide')
-
-
+    if(answerButtonsElement.innerHtml === 'questions[choices].correctAnswer') {
+       time +=10;
+        } else {
+        time -=10;
+        console.log(time)
+}
 }
 
 nextButton.addEventListener('click', nextQuestion)
@@ -131,10 +130,6 @@ const questions = [
     }
 ]
 
-if(answerButtonsElement.innerHtml === 'questions[choices].correctAnswer') {
-    score++
-    console.log(score)
-    } else {
-    score -= 10;
-    time -=20;
-    }
+// TO DO: Stop game when timer reaches 0 OR all questions have been answered
+
+// TO DO: Store high scores in local storage and display at end of quiz
