@@ -11,10 +11,30 @@ const answerButtonsElement = document.getElementById('answer-buttons')
 const nextButton = document.getElementById('next-btn')
 let index=0;
 
+
+//Timer
+
+const startingMinutes = 10;
+let time = startingMinutes * 60;
+const countdownEl = document.getElementById('countdown');
+
+setInterval(updateCountdown, 1000);
+
+function updateCountdown()  {
+    const minutes = Math.floor(time / 60);
+    let seconds = time % 60;
+
+    countdownEl.innerHTML = ${minutes}:${seconds};
+    time--;
+}
+
+
+
+
 // Don't know what this does or how it works!
 // Q: what is 'let'?  How is it different to Const?
 
-let shuffledQuestions, currentQuestionIndex
+// let shuffledQuestions, currentQuestionIndex
 
 
 // The below starts the game when the button is clicked (Event listener)
@@ -64,6 +84,7 @@ let choiceFourEl = document.getElementById('btn-4')
 console.log(choiceFourEl)
 choiceFourEl.textContent=questions[index].choices[3]
 
+
 }
 
 function selectAnswer() {
@@ -99,24 +120,24 @@ function nextQuestion() {
 const questions = [
     {
         question: 'What does CSS stand for?',
-        choices: ['Cascading Style Sheets', 'Computer Syntax Selectors', 'Q1 choice C', 'Q1 choice D'],
+        choices: ['Cascading Style Sheets', 'Computer Syntax Selectors', 'Crypto Currency Savings', 'Cherry Chocolate Sundae'],
         correctAnswer: 'Cascading Style Sheets'
 
     }, 
     {
-        question: 'This is question 2',
-        choices: ['Q2 choice A', 'Q2 choice B', 'Q2 choice C', 'Q2 choice D'],
-        correctAnswer: 'Q2 choice A'
+        question: 'Which of these is a programming language?',
+        choices: ['Cobra', 'Viper', 'Python', 'Black Mamba'],
+        correctAnswer: 'Python'
     },
     {
-        question: 'This is question 3',
-        choices: ['Q3 choice A', 'Q3 choice B', 'Q3 choice C', 'Q3 choice D'],
-        correctAnswer: 'Q3 choice A'
+        question: 'In HTML, the acronym DOM precedes which type of foliage?',
+        choices: ['Bush', 'Vine', 'Plant', 'Tree'],
+        correctAnswer: 'Tree'
     },
     {
-        question: 'This is question 4',
-        choices: ['Q4 choice A', 'Q4 choice B', 'Q4 choice C', 'Q4 choice D'],
-        correctAnswer: 'Q3 choice A'
+        question: 'How fun is Javascript?',
+        choices: ['So fun', 'So so fun', 'So so so fun', 'The most fun of all time'],
+        correctAnswer: 'The most fun of all time'
     }
 ]
 
