@@ -9,6 +9,7 @@ const questionContainerElement = document.getElementById
 const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const nextButton = document.getElementById('next-btn')
+let index=0;
 
 // Don't know what this does or how it works!
 // Q: what is 'let'?  How is it different to Const?
@@ -45,23 +46,23 @@ console.log(questions[0])
 console.log(questions[0].choices)
 let questionEl=document.getElementById('question')
 console.log(questionEl)
-questionEl.textContent=questions[0].question
+questionEl.textContent=questions[index].question
 
 let choiceOneEl = document.getElementById('btn-1')
 console.log(choiceOneEl)
-choiceOneEl.textContent=questions[0].choices[0]
+choiceOneEl.textContent=questions[index].choices[0]
 
 let choiceTwoEl = document.getElementById('btn-2')
 console.log(choiceTwoEl)
-choiceTwoEl.textContent=questions[0].choices[1]
+choiceTwoEl.textContent=questions[index].choices[1]
 
 let choiceThreeEl = document.getElementById('btn-3')
 console.log(choiceThreeEl)
-choiceThreeEl.textContent=questions[0].choices[2]
+choiceThreeEl.textContent=questions[index].choices[2]
 
 let choiceFourEl = document.getElementById('btn-4')
 console.log(choiceFourEl)
-choiceFourEl.textContent=questions[0].choices[3]
+choiceFourEl.textContent=questions[index].choices[3]
 
 }
 
@@ -85,7 +86,9 @@ nextButton.addEventListener('click', nextQuestion)
 
 function nextQuestion() {
     console.log('Question 2')
-    nextButton.classList.add('hide')
+    nextButton.classList.add('hide');
+    index++
+    showQuestion();
 
 }
 
