@@ -10,7 +10,7 @@ const questionElement = document.getElementById('question')
 const answerButtonsElement = document.getElementById('answer-buttons')
 const nextButton = document.getElementById('next-btn')
 let index=0;
-
+var score = 0
 
 
 
@@ -105,8 +105,7 @@ function nextQuestion() {
 }
 
 
-// The below are the questions.  Currently don't work!
-// Q: how do I add another question?
+// Questions
 
 const questions = [
     {
@@ -132,11 +131,10 @@ const questions = [
     }
 ]
 
-// for (const choices=0; choices < questions.length; choices++){
-
-// if(response==questions[choices].correctAnswer){
-//     score++;
-
-// }
-
-// ]
+if(answerButtonsElement.innerHtml === 'questions[choices].correctAnswer') {
+    score++
+    console.log(score)
+    } else {
+    score -= 10;
+    time -=20;
+    }
