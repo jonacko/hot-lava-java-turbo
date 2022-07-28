@@ -12,9 +12,11 @@ const nextButton = document.getElementById('next-btn')
 let index=0;
 
 
+
+
 //Timer
 
-const startingMinutes = 10;
+const startingMinutes = 1;
 let time = startingMinutes * 60;
 const countdownEl = document.getElementById('countdown');
 
@@ -24,42 +26,31 @@ function updateCountdown()  {
     const minutes = Math.floor(time / 60);
     let seconds = time % 60;
 
-    countdownEl.innerHTML = ${minutes}:${seconds};
+    countdownEl.innerHTML = `${seconds}`;
     time--;
 }
 
+//Hides the timer before start button is pressed
 
+countdownEl.classList.add('hide')
 
-
-// Don't know what this does or how it works!
-// Q: what is 'let'?  How is it different to Const?
-
-// let shuffledQuestions, currentQuestionIndex
 
 
 // The below starts the game when the button is clicked (Event listener)
-// Q: what is 'classList.add'?
 
 startButton.addEventListener('click', startGame)
 
 function startGame() {
     console.log('Started')
     startButton.classList.add('hide')
+    countdownEl.classList.remove('hide')
 
-    // 
-    // shuffledQuestions = questions.sort(() => Math.random() - .5)
-    //currentQuestionIndex = 0
     questionContainerElement.classList.remove('hide')
 showQuestion()
 }
 
-// This bit doesn't appear to work as the questions don't show and the 'next' button is hidden
 
-// function nextQuestion() {
-//     showQuestion(shuffledQuestions[currentQuestionIndex])
-// }
-
-// Question 1 buttons - choice one displays but the rest don't
+// Questions and correct answers
 
 function showQuestion() {
 console.log(questions[0])
@@ -141,7 +132,11 @@ const questions = [
     }
 ]
 
-const SCORE_POINTS = 100
-const MAX_QUESTIONS = 4
+// for (const choices=0; choices < questions.length; choices++){
 
+// if(response==questions[choices].correctAnswer){
+//     score++;
 
+// }
+
+// ]
